@@ -1,0 +1,34 @@
+.Title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    margin: 3% 0 0 0;
+    padding: 0;
+}
+
+.ContentContainer {
+    text-align: center;
+    margin: 3% 0 0 0;
+}
+
+#result {
+    margin: 3% 0 0 2%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#map {
+    text-align: center ;
+}
+
+table, th, td {
+    padding: 10px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.centerTable {
+    margin: 0 1 0 1;
+}

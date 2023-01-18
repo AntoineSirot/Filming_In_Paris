@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Lieux de Tournages Paris</title>
+</head>
+<body>
+    <div class="MainContainer">
+        <div class="ContentContainer">
+
+            <p class="Title">Lieux de Tournages Paris :</p>
+
+            <div id = "map">
+            </div>
+            
+            <p class="Title">Nom du Film :</p>
+            <input type="text" id="NomTournage" placeholder="Ex : 30 Jours Max">
+            <button type="button" onclick="getNomTournage();">Rechercher</button>
+            <button type="button" onclick="searchPage(0);">Reinitialiser</button>
+
+
+            <p class="Title">Numéro de page :</p>
+            <input type="number" id="PageNumber" placeholder="0">
+            <button type="button" onclick="searchPage();">Actualiser</button>
+
+        </div>
+
+        <div id = "result">      
+        </div>  
+
+        <script src="main.js">
+        </script>
+
+
+
+    </div>
+
+</body>
+</html>
