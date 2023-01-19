@@ -10,8 +10,8 @@ async function searchPage(x) {
     if (start < 0) {
         start = 0;
     }
-    start *=30
-    const api_url = "https://opendata.paris.fr/api/records/1.0/search/?dataset=lieux-de-tournage-a-paris&q=&rows=30&start=" + start + "&facet=annee_tournage&facet=type_tournage&facet=nom_tournage&facet=nom_realisateur&facet=nom_producteur&facet=ardt_lieu&facet=date_debut&facet=date_fin";
+    start *=15
+    const api_url = "https://opendata.paris.fr/api/records/1.0/search/?dataset=lieux-de-tournage-a-paris&q=&rows=15&start=" + start + "&facet=annee_tournage&facet=type_tournage&facet=nom_tournage&facet=nom_realisateur&facet=nom_producteur&facet=ardt_lieu&facet=date_debut&facet=date_fin";
     const response = await fetch(api_url);
     // Parsing it to JSON format
     const data = await response.json();
@@ -46,7 +46,7 @@ async function getNomTournage(){
 
 async function getMap(s2,s3,s4) {
     console.log(s2, s3);
-    let s1 = "<br><a class = \"Title\"> Localisation </a><br><p> Nom du film : "+s4.toString()+"</p><iframe width=\"425\" height=\"350\" frameborder=\"0\" scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\" src=\"https://www.openstreetmap.org/export/embed.html?bbox=1.7591857910156252%2C48.60067914322632%2C2.7479553222656254%2C48.94685707023662&amp;layer=mapnik&amp;marker=" + s2 + "%2C" + s3 + "\" style=\"border: 1px solid black\"></iframe><br/><small><a href=\"https://www.openstreetmap.org/?mlat=48.7741&amp;mlon=2.2536#map=11/48.7741/2.2536\">Afficher une carte plus grande</a></small>";
+    let s1 = "<br><h2> Localisation </h2><br><p> Nom du film : "+s4.toString()+"</p><iframe width=\"425\" height=\"350\" frameborder=\"0\" scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\" src=\"https://www.openstreetmap.org/export/embed.html?bbox=1.7591857910156252%2C48.60067914322632%2C2.7479553222656254%2C48.94685707023662&amp;layer=mapnik&amp;marker=" + s2 + "%2C" + s3 + "\" style=\"border: 1px solid black\"></iframe><br/><small><a href=\"https://www.openstreetmap.org/?mlat=48.7741&amp;mlon=2.2536#map=11/48.7741/2.2536\">Afficher une carte plus grande</a></small>";
     document.getElementById("map").innerHTML = s1;
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
